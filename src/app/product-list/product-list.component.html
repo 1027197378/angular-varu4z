@@ -1,0 +1,4 @@
+<div [ngClass]="{ center: true }">Products</div>
+<button (click)="change()">确认</button>
+<!-- <input type="text" [(ngModel)]="name" placeholder="name" /> -->
+<div *ngFor="let item of products">{{ item.name }}</div>

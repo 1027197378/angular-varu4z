@@ -1,4 +1,9 @@
-<div [ngClass]="{ center: true }">Products</div>
-<button (click)="change()">确认</button>
-<!-- <input type="text" [(ngModel)]="name" placeholder="name" /> -->
-<div *ngFor="let item of products">{{ item.name }}</div>
+<div>Products</div>
+<div [ngClass]="{ item: true }" *ngFor="let item of products">
+  <h3>
+    <a [title]="item.description">{{ item.name }}</a>
+    <button style="margin-left:10px" (click)="Add()">+</button>
+    <!-- <app-product-alert [product]="item"></app-product-alert> -->
+  </h3>
+  <span>{{ item.description }}</span>
+</div>

@@ -13,8 +13,8 @@ export class ProductListComponent {
   share() {
     window.alert('The product has been shared!');
   }
-  change() {
-    this.name = 'asdasdasd';
+  Add() {
+    alert(1);
   }
 }
 

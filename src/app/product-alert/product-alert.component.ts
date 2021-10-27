@@ -1,3 +1,4 @@
+import { AnimateTimings } from '@angular/animations';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../products';
 
@@ -7,15 +8,17 @@ import { Product } from '../products';
   styleUrls: ['./product-alert.component.css'],
 })
 export class ProductAlertComponent implements OnInit {
-  constructor() {}
+  products: Product[];
+  constructor() {
+    this.products = [];
+  }
   @Input() product!: Product;
   @Output() notifys = new EventEmitter(true);
   ngOnInit() {}
-  show(): void {
-    alert(this.product.price);
+  deleteItem(): void {
+    this.notifys.emit();
   }
-  Child(a: string): string {
-    console.log(a);
-    return a + 'childAction';
+  AddItem(item: Product): void {
+    this.products.push(item);
   }
 }

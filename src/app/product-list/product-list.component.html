@@ -3,7 +3,11 @@
   <h3>
     <a [title]="item.description">{{ item.name }}</a>
     <button style="margin-left:10px" (click)="Add()">+</button>
-    <!-- <app-product-alert [product]="item"></app-product-alert> -->
+    <app-product-alert
+      [product]="item"
+      (notifys)="share()"
+      #alert1
+    ></app-product-alert>
   </h3>
   <span>{{ item.description }}</span>
 </div>

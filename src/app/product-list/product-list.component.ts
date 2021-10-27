@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { ProductAlertComponent } from '../product-alert/product-alert.component';
 
 import { products } from '../products';
 
@@ -8,13 +9,15 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
+  // @ViewChild('alert1') alert?: ProductAlertComponent;
   products = products;
   name: string = '';
   share() {
-    window.alert('The product has been shared!');
+    // window.alert('子组件调用父组件方法');
   }
   Add() {
-    alert(1);
+    // let ms = this.alert.Child('faaaaaa');
+    // alert(ms);
   }
 }
 

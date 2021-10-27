@@ -14,7 +14,7 @@ import { ProductAlertComponent } from './product-alert/product-alert.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'shoppings', component: ProductAlertComponent },
+      { path: 'shopping', component: ProductAlertComponent },
     ]),
   ],
   declarations: [

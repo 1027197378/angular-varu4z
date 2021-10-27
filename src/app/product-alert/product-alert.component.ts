@@ -18,7 +18,7 @@ export class ProductAlertComponent implements OnInit {
   deleteItem(): void {
     this.notifys.emit();
   }
-  AddItem(item: Product): void {
+  Shopping(item: Product): void {
     this.products.push(item);
   }
 }

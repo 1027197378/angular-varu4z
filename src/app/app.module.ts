@@ -12,7 +12,10 @@ import { ProductAlertComponent } from './product-alert/product-alert.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([{ path: '', component: ProductListComponent }]),
+    RouterModule.forRoot([
+      { path: '', component: ProductListComponent },
+      { path: 'shoppings', component: ProductAlertComponent },
+    ]),
   ],
   declarations: [
     AppComponent,

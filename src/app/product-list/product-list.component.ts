@@ -13,6 +13,6 @@ export class ProductListComponent {
   products = products;
   name: string = '';
   Add(item: Product) {
-    this.shop.AddItem(item);
+    this.shop.Shopping(item);
   }
 }

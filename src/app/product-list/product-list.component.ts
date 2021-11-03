@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
-
 import { Product, products } from '../products';
 
 @Component({

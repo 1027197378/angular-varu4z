@@ -13,10 +13,11 @@ export class ProductAlertComponent implements OnInit {
     this.products = [];
   }
   @Input() product!: Product;
-  @Output() notifys = new EventEmitter(true);
+  @Output() notifys = new EventEmitter<string>(true);
   ngOnInit() {}
-  deleteItem(): void {
-    this.notifys.emit();
+  deleteItem(item: Product): void {
+    this.products = this.products.filter((a) => a.id != item.id);
+    this.notifys.emit(item.name);
   }
   Shopping(item: Product): void {
     this.products.push(item);

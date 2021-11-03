@@ -15,4 +15,7 @@ export class ProductListComponent {
   Add(item: Product) {
     this.shop.Shopping(item);
   }
+  delete(name: string) {
+    alert('子组件删除了' + name);
+  }
 }

@@ -2,9 +2,10 @@
 <div [ngClass]="{ item: true }" *ngFor="let item of products">
   <h3>
     <a [title]="item.description">{{ item.name }}</a>
+    <a [routerLink]="['/detail',item.id]">
     <button style="margin-left:10px" (click)="Add(item)">+</button>
   </h3>
   <span>{{ item.description }}</span>
 </div>
 
-<app-product-alert #shopping></app-product-alert>
+<app-product-alert #shopping (notifys)="delete($event)"></app-product-alert>

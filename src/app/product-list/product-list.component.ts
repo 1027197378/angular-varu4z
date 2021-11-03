@@ -9,7 +9,4 @@ import { Product, products } from '../products';
 export class ProductListComponent {
   products = products;
   name: string = '';
-  delete(name: string) {
-    alert('子组件删除了' + name);
-  }
 }

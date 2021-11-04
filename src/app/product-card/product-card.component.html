@@ -1,0 +1,4 @@
+<li [routerLink]="['/detail', item.id]" *ngFor="let item of items">
+  <a [routerLink]="['/detail', item.id]"> {{ item.name }} </a>
+</li>
+<h2 *ngIf="items.length > 0">总价{{ count() }}</h2>

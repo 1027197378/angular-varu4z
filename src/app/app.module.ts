@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
   imports: [
@@ -14,11 +15,16 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      // { path: 'shopping', component: ProductAlertComponent },
       { path: 'detail/:id', component: ProductDetailComponent },
+      { path: 'cart', component: ProductCardComponent },
     ]),
   ],
-  declarations: [AppComponent, TopBarComponent, ProductListComponent],
+  declarations: [
+    AppComponent,
+    TopBarComponent,
+    ProductListComponent,
+    ProductCardComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -8,17 +8,20 @@ import { CartService } from './cart.service';
   styleUrls: ['./product-card.component.css'],
 })
 export class ProductCardComponent implements OnInit {
-  items: Product[] = [];
-  constructor(private cartService: CartService) {}
+  constructor(public cartService: CartService) {}
 
-  ngOnInit() {
-    this.items = this.cartService.getCards();
-  }
+  ngOnInit() {}
   count() {
     let price: number = 0;
-    this.items.forEach((a) => {
+    this.cartService.items.forEach((a) => {
       price = price + a.price;
     });
     return price;
+  }
+  clear() {
+    this.cartService.clear();
+  }
+  delete(index: number) {
+    this.cartService.items.splice(index, 1);
   }
 }

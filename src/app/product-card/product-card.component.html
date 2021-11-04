@@ -1,4 +1,9 @@
-<li [routerLink]="['/detail', item.id]" *ngFor="let item of items">
+<li *ngFor="let item of cartService.items; let i = index">
   <a [routerLink]="['/detail', item.id]"> {{ item.name }} </a>
+  <button (click)="delete(i)">-</button>
 </li>
-<h2 *ngIf="items.length > 0">总价{{ count() }}</h2>
+<h2 *ngIf="cartService.items.length == 0">没有数据</h2>
+<h2 *ngIf="cartService.items.length > 0">总价{{ count() }}</h2>
+<button *ngIf="cartService.items.length > 0" (click)="clear()">
+  清空购物车
+</button>

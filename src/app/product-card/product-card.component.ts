@@ -12,7 +12,7 @@ export class ProductCardComponent implements OnInit {
 
   ngOnInit() {}
   count() {
-    let price: number = 0;
+    let price = 0;
     this.cartService.items.forEach((a) => {
       price = price + a.price;
     });

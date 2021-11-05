@@ -8,5 +8,5 @@ import { Product, products } from '../products';
 })
 export class ProductListComponent {
   products = products;
-  name: string = '';
+  name: any;
 }
